@@ -6,7 +6,9 @@
     "start": "concurrently \"npm run server\" \"npm run dev\"",
     "server": "nodemon server.cjs",
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -18,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/fantastic4-efficio/efficio/issues"
   },
-  "homepage": "https://github.com/fantastic4-efficio/efficio#readme",
+  "homepage": "https://sweoreo.github.io/Efficio-Task-Tracker/",
   "description": "",
   "dependencies": {
     "bcrypt": "^5.1.1",
@@ -28,6 +30,7 @@
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "framer-motion": "^12.5.0",
+    "gh-pages": "^6.3.0",
     "jsonwebtoken": "^9.0.2",
     "lucide-react": "^0.479.0",
     "luxon": "^3.5.0",
