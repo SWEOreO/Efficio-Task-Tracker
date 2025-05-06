@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+        "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "concurrently \"npm run server\" \"npm run dev\"",
     "server": "nodemon server.cjs",
     "dev": "vite",
-    "build": "vite build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "build": "vite build"
   },
   "repository": {
     "type": "git",
